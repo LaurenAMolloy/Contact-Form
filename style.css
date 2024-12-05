@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Karla";
+    src: url("./assets/fonts/Karla-VariableFont_wght.ttf");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,15 +15,16 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    font-family: "Karla", serif;
+    font-family: "Karla", sans-serif;
     font-size: 16px;
+    ;
 }
 
 .form-container {
-    width: 80%;
+    width: 650px;
     padding: 30px;
-    background-color: white;
-    border-radius: 1rem;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15px;
 }
 
 .form {
@@ -37,18 +43,18 @@ body {
 }
 
 .name-inputs input {
-    width: 100%
+    width: 100%;
 }
 
-.label {
-    font-size: .8rem;
+label {
+    font-size: 14px;
 }
 
 input:not([type="checkbox"]):not([type="radio"]) {
-    border: 1px solid grey;
-    font-size: 1rem;
-    padding: 1rem;
-    border-radius: .5rem;
+    border: 1px solid hsl(186, 15%, 59%);
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
     margin: 8px 0;
     width: 100%;
     cursor: pointer;
@@ -56,7 +62,7 @@ input:not([type="checkbox"]):not([type="radio"]) {
 
 input:not([type="checkbox"]):not([type="radio"]):hover,
 textarea:hover {
-    border: 1px solid hsl(169, 82%, 27%)
+    border: 1px solid hsl(169, 82%, 27%);
 }
 
 input:not([type="checkbox"]):not([type="radio"]):focus,
@@ -66,16 +72,16 @@ textarea:focus {
 
 textarea {
     width: 100%;
-    font-size: 1rem;
-    padding: .8rem;
-    border-radius: .5rem;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
     resize: none;
     margin: 8px 0;
     border: 1px solid hsl(186, 15%, 59%);
     cursor: pointer;
 }
 
-.query {
+#query {
     display: flex;
     gap: 10px;
     margin: 8px 0;
@@ -84,31 +90,40 @@ textarea {
 .query-type {
     border: 1px solid hsl(186, 15%, 59%);
     width: 100%;
-    padding: .8rem 1.3rem;
-    border-radius: .5rem;
+    padding: 10px 20px;
+    border-radius: 5px;
     display: flex;
-    gap: .8rem;
+    gap: 10px;
 }
 
 .query-type label,
-.query-type input {
+.query-type input,
+.query-type {
     cursor: pointer;
 }
 
+input[type=radio] {
+    accent-color: hsl(169, 82%, 27%);
+}
+
 h1 {
-    font-size: 3rem;
-    margin-bottom: 3rem;
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
 button {
     font-weight: bold;
     color: hsl(0, 0%, 100%);
     background-color: hsl(169, 82%, 27%);
-    padding: 1rem 0;
+    padding: 15px 0;
     border-radius: 5px;
     border: 1px solid hsl(187, 24%, 22%);
-    margin-top: .8rem;
+    margin-top: 8px;
     cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(169, 82%, 15%);
 }
 
 .checkbox>div {
@@ -124,9 +139,9 @@ input[type=checkbox] {
 }
 
 span.error {
-    font-size: .8rem;
+    font-size: 14px;
     display: block;
-    color: hsl(0, 66%, 56%)
+    color: hsl(0, 66%, 56%);
 }
 
 span.hidden {
@@ -147,21 +162,22 @@ span.hidden {
     top: 30px;
     width: 400px;
     background-color: hsl(187, 24%, 22%);
-    padding: 1.5rem;
-    border-radius: .8rem;
-    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    color: hsl(0, 0%, 100%);
+    font-size: 14px;
     transition: all 1s linear;
 }
 
 .toast>div {
     display: flex;
     align-items: center;
-    gap: .8rem;
+    gap: 10px;
     margin-bottom: 20px;
 }
 
 .toast img {
-    width: .9rem;
+    width: 14px;
 }
 
 .toast span {
@@ -169,11 +185,10 @@ span.hidden {
 }
 
 .toast.hidden {
-    display: none;
+    transform: translateY(-400px);
 }
 
 @media screen and (max-width: 400px) {
-
     .form-container {
         width: 300px;
     }
@@ -182,7 +197,7 @@ span.hidden {
         flex-wrap: wrap;
     }
 
-    .query {
+    #query {
         flex-wrap: wrap;
     }
 
